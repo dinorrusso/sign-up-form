@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="ui-container">
+      <div class="image-container">
+        <img class="bg-image" src="./images/background.jpg" alt="Background" />
+        <div class="logo-bar">
+          <img class="logo" src="./images/odin-lined.png" alt="Logo" />
+          <span class="logo-text blinker-semibold">Form Project</span>
+        </div>
+        <div class="attribution-bar">
+          <span
+            >Photo by
+            <a
+              href="https://unsplash.com/@sardarkamran128?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >SARDAR KAMRAN KHAN</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/a-view-of-a-waterfall-from-inside-a-cave-jYF1kn3eyHo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+              >Unsplash</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="form-container blinker-semibold">
+        <!-- Your form goes here -->
+        <div class="form-intro">
+          <span
+            >This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams.<br />
+            Sign up now to get started. <br /><br />
+            You know you want to.<br /><br
+          /></span>
+          <form class="form-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">FIRST NAME</label>
+                  <input id="firstName" type="text" name="firstName" />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">LAST NAME</label>
+                  <input id="lastName" type="text" name="lastName" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">EMAIL</label>
+                  <input id="email" type="email" name="email" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">PHONE NUMBER</label>
+                  <input id="phone" type="tel" name="phone" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="password">PASSWORD</label>
+                  <input id="password" type="password" name="password" required/>
+                  <span class="password-validation">
+                    At least 8 characters long<br>
+                    At least one uppercase letter<br>
+                    At least one lowercase letter<br>
+                    At least one number<br>
+                    At least one special character
+                  </span>
+                </div>
+                <div class="form-group">
+                  <label for="confirm-pw">CONFIRM PASSWORD</label>
+                  <input id="confirm-pw" type="password" name="confirm-password" required/>
+                  <span id="password-error">
+                  </span>
+                </div>
+              </div>
+            <hr class="divider">
+            <div class="button blinker-regular">
+              <button type="submit">Create Account</button>
+            </div>
+            <span>Already have an account?&nbsp;&nbsp;</span><span class="login">Log in</span>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

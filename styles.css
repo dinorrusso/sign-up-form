@@ -1,0 +1,239 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin :0;
+  padding:0;
+}
+
+
+.blinker-thin {
+  font-family: "Blinker", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.blinker-extralight {
+  font-family: "Blinker", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.blinker-light {
+  font-family: "Blinker", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.blinker-regular {
+  font-family: "Blinker", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.blinker-semibold {
+  font-family: "Blinker", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.blinker-bold {
+  font-family: "Blinker", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.blinker-extrabold {
+  font-family: "Blinker", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.blinker-black {
+  font-family: "Blinker", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 35vw;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover; /* Ensures full image visible, no white space */
+  z-index: 1;
+}
+
+/* Center the logo bar vertically */
+.logo-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(10, 57, 4, 0.5);
+  height: 275px; /* Adjust as needed */
+  z-index: 2;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Ensures logo is white if it's a black PNG/SVG */
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 100px;
+}
+
+.attribution-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(10, 57, 4, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.form-container {
+  flex: 1;
+  background: white; 
+  height: 100vh;
+  display: flex;
+  align-items: top;
+  justify-content: left;
+  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 250px;
+  font-size: 48px;
+}
+
+.attribution-bar a,
+.attribution-bar a:visited,
+.attribution-bar a:active {
+  color: #fff;
+  text-decoration: underline; /* Optional: keeps the underline for clarity */
+}
+
+.attribution-bar a:hover {
+  color: #e0e0e0; /* Optional: lighter on hover */
+}
+
+.form-intro {
+  font-size: 48px;
+}
+
+.form-body {
+  font-size: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1em; /* space between the two columns */
+  margin-bottom: 1.5em;
+}
+
+.form-group {
+  flex: 1; /* both groups take equal width */
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  position: relative;
+  /* No horizontal padding or margin here */
+}
+
+label {
+  font-family: "Blinker", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 0.1em;
+  font-size: 1em;
+}
+
+input {
+  padding: .5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input:focus {
+  border: 2px solid #0074D9;
+  outline: none;
+  box-shadow:2px 2px #d1d1d1;
+}
+
+#password:invalid,  #confirm-pw:invalid {
+  border: 2px solid red;
+}
+button {
+  font-family: "Blinker", sans-serif;
+  margin-top: 100px;
+  background-color: rgba(10, 57, 4, 0.8);
+  border-radius: 20px;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 20px;
+  border-width: 0;
+  width:300px;
+}
+
+/* Absolutely positioned divider */
+.divider {
+  position: absolute;
+  left: -50px;  /* Negative of .form-container's left margin */
+  right: -250px; /* Negative of .form-container's right margin */
+  top: 420px;   /* Adjust as needed for vertical placement */
+  height: 2px;
+  background: #ccc;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: calc(100% + 300px); /* 50 + 250 */
+  z-index: 1;
+}
+.login {
+  color: rgba(10, 57, 4, 0.8);
+  font-weight: 600;
+}
+.password-validation{
+  font-size: .6em;
+  font-weight: 200;
+  font-style: italic;
+  padding-left: 2rem;
+
+}
+#password-error{
+  color: red;
+  padding-left: 2rem;
+
+}

@@ -35,7 +35,6 @@
         </div>
       </div>
       <div class="form-container blinker-semibold">
-        <!-- Your form goes here -->
         <div class="form-intro">
           <span
             >This is not a real online service! You know you need something like
@@ -43,58 +42,56 @@
             Sign up now to get started. <br /><br />
             You know you want to.<br /><br
           /></span>
-          <form class="form-body">
-            <form>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">FIRST NAME</label>
-                  <input id="firstName" type="text" name="firstName" />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">LAST NAME</label>
-                  <input id="lastName" type="text" name="lastName" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="email">EMAIL</label>
-                  <input id="email" type="email" name="email" />
-                </div>
-                <div class="form-group">
-                  <label for="phone">PHONE NUMBER</label>
-                  <input id="phone" type="tel" name="phone" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="password">PASSWORD</label>
-                  <input id="password" type="password" name="password" required/>
-                  <span class="password-validation">
-                    At least 8 characters long<br>
-                    At least one uppercase letter<br>
-                    At least one lowercase letter<br>
-                    At least one number<br>
-                    At least one special character
-                  </span>
-                </div>
-                <div class="form-group">
-                  <label for="confirm-pw">CONFIRM PASSWORD</label>
-                  <input id="confirm-pw" type="password" name="confirm-password" required/>
-                  <span id="password-error">
-                  </span>
-                </div>
-              </div>
-            
-            <div class="button blinker-regular">
-              <button type="submit">Create Account</button>
-            </div>
-            <span>Already have an account?&nbsp;&nbsp;</span><span class="login">Log in</span>
-          </form>
         </div>
-        <hr class="divider">
+        <!-- This is the ONLY form tag -->
+        <form class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">FIRST NAME</label>
+              <input id="firstName" type="text" name="firstName" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">LAST NAME</label>
+              <input id="lastName" type="text" name="lastName" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <input id="email" type="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">PHONE NUMBER</label>
+              <input id="phone" type="tel" name="phone" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">PASSWORD</label>
+              <input id="password" type="password" name="password" required/>
+              <span class="password-validation">
+                At least 8 characters long<br>
+                At least one uppercase letter<br>
+                At least one lowercase letter<br>
+                At least one number<br>
+                At least one special character
+              </span>
+            </div>
+            <div class="form-group">
+              <label for="confirm-pw">CONFIRM PASSWORD</label>
+              <input id="confirm-pw" type="password" name="confirm-password" required/>
+              <span id="password-error">
+              </span>
+            </div>
+          </div>
+          <div class="button blinker-regular">
+            <button type="submit">Create Account</button>
+          </div>
+          <span>Already have an account?&nbsp;&nbsp;</span><span class="login">Log in</span>
+        </form>
+        <hr class="divider"> <!-- The divider is correctly placed here, after the single form -->
       </div>
     </div>
-
 
     <script src="script.js" defer></script>
   </body>

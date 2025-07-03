@@ -55,8 +55,6 @@
 html, body {
   /* Removed height: 100vh; here to allow content to dictate height */
   min-height: 100vh; /* Ensure it's at least 100vh, but can grow */
-  margin: 0;
-  padding: 0;
 }
 
 .ui-container {
@@ -132,11 +130,7 @@ html, body {
   flex-direction: column; /* Allow content inside to stack */
   align-items: flex-start; /* Align form content to the start */
   justify-content: flex-start; /* Align form content to the start */
-  /* padding-top: 4em;
-  padding-left: 2em;
-  padding-right: 5em; */
-  font-size: 1em;
-  /* Removed height: 100%; here to allow content to dictate height */
+  font-size: 1rem;
   overflow-y: auto; /* Add scrollbar if content overflows vertically */
 }
 
@@ -152,16 +146,15 @@ html, body {
 }
 
 .form-intro {
-   padding-top: 4em;
-  padding-left: 2em;
-  padding-right: 5em;
-  font-size: 2em;
-  margin-bottom: 2em; /* Add space below intro text */
+  padding: 4em 2em 0 2em; /* Top, right/left, bottom padding */
+  font-size: 2em; /* Relative to .form-container's font-size */
+  margin-bottom: 2em;
 }
 
 .form-body {
-  font-size: 16px;
+  font-size: 1rem; /* Base font size for form elements, consistent with form-container */
   width: 100%; /* Ensure form body takes full available width */
+  padding: 0 5em 0 2em; /* Apply horizontal padding here for the form content */
 }
 
 .form-row {
@@ -175,11 +168,6 @@ html, body {
   flex: 1; /* both groups take equal width */
   display: flex;
   flex-direction: column;
-}
-
-form {
-  position: relative;
-  /* No horizontal padding or margin here */
 }
 
 label {
@@ -224,8 +212,7 @@ button {
   background: #ccc; 
   border: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  margin-top: -200px; 
-  z-index: 1;
+  margin-top:-120px; 
 }
 
 .login {
@@ -236,11 +223,11 @@ button {
   font-size: .6em;
   font-weight: 200;
   font-style: italic;
-  padding-left: 2rem;
+  padding-left: 2em;
 
 }
 #password-error{
   color: red;
-  padding-left: 2rem;
+  padding-left: 2em;
 
 }
